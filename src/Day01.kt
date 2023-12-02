@@ -21,6 +21,13 @@ fun main() {
             sum += (digit1.toString() + digit2).toInt()
         }
         return sum
+        /* sjukt mycket snyggare lösning
+        return input.sumOf {
+            val result = it
+                .split("").mapNotNull { it.toIntOrNull() }
+            println(result.first() * 10 + result.last())
+            result.first() * 10 + result.last()
+        } */
     }
 
     fun part2(input: List<String>): Int {
