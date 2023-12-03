@@ -71,7 +71,6 @@ fun main() {
             var color = ""
             var amount = 0
             for (char in line) {
-                println(char)
                 if (char.equals(',') || char.equals(':') || char.equals(';')) {
                     amount = 0
                     color = ""
@@ -88,26 +87,20 @@ fun main() {
                     color += char
                 }
                 if (color.equals("red") && amount >= sumRed) {
-                    println("red")
                     sumRed = amount
                 }
                 else if (color.equals("blue") && amount >= sumBlue) {
-                    println("blue")
                     sumBlue = amount
                 }
                 else if (color.equals("green") && amount >= sumGreen) {
-                    println("green")
                     sumGreen = amount
                 }
                 if (char.equals('G')) {
-                    println("gamet: " + (sumRed * sumBlue * sumGreen))
                     power += (sumRed * sumBlue * sumGreen)
-                    println(power)
                     sumRed = 1
                     sumBlue = 1
                     sumGreen = 1
                 }
-                println("game: " + id + " sumRed: " + sumRed + " sumGreen: " + sumGreen + " sumBlue: " + sumBlue)
             }
         }
         power += (sumRed * sumBlue * sumGreen)
